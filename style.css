@@ -1,0 +1,89 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: #111;
+}
+
+
+.carousel {
+position: relative;
+width: 800px;
+max-width: 95%;
+overflow: hidden;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.carousel-track {
+display: flex;
+transition: transform 0.6s ease-in-out;
+}
+
+
+.slide {
+min-width: 100%;
+}
+
+
+.slide img {
+width: 100%;
+display: block;
+}
+
+
+.nav {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background: rgba(0,0,0,0.5);
+border: none;
+color: white;
+font-size: 30px;
+padding: 10px 15px;
+cursor: pointer;
+border-radius: 50%;
+}
+
+
+.nav:hover {
+background: rgba(0,0,0,0.8);
+}
+
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+
+.dots {
+position: absolute;
+bottom: 15px;
+width: 100%;
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+
+
+.dots button {
+width: 12px;
+height: 12px;
+border-radius: 50%;
+border: none;
+background: #bbb;
+cursor: pointer;
+}
+
+
+.dots button.active {
+background: white;
+}
